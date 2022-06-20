@@ -188,7 +188,7 @@ func init() {
 			Handle(func(ctx *zero.Ctx) {
 				ctx.SendChain(message.Text(kanban.Banner))
 			})
-		zero.OnFullMatch("查看zbp公告", zero.OnlyToMe, zero.AdminPermission).SetBlock(true).FirstPriority().
+		zero.OnFullMatch("查看zbp的公告", zero.OnlyToMe, zero.AdminPermission).SetBlock(true).FirstPriority().
 			Handle(func(ctx *zero.Ctx) {
 				ctx.SendChain(message.Text(kanban.Kanban()))
 			})
